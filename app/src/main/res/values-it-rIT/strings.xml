@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Subnetting</string>
+    <string name="address">Indirizzo</string>
+    <string name="TurnBackButton">Indietro</string>
+    <string name="BroadcastAddress">Indirizzo di Broadcast</string>
+    <string name="FirstAdddress">Primo host</string>
+    <string name="LastAddress">Ultimo host</string>
+    <string name="NetAddress">Indirizzo di rete</string>
+    <string name="ButtonSubnet">Subnetta</string>
+    <string name="subnet_mask">Maschera di rete</string>
+    <string name="ip_address">Indirizzo IP</string>
+</resources>

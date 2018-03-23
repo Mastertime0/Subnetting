@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Subnetting</string>
+    <string name="address">Address</string>
+    <string name="NetAddress">Net Address</string>
+    <string name="BroadcastAddress">Broadcast Address</string>
+    <string name="FirstAdddress">First Host Address</string>
+    <string name="LastAddress">Last Host Address</string>
+    <string name="subnet_mask">Subnet Mask</string>
+    <string name="ButtonSubnet">Subnet</string>
+    <string name="TurnBackButton">Back</string>
+    <string name="ip_address">IP Address</string>
+</resources>

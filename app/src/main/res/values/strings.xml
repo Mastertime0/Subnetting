@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Subnetting</string>
+    <string name="ip1" translatable="false" />
+    <string name="ip2" translatable="false" />
+    <string name="ip3" translatable="false" />
+    <string name="ip4" translatable="false" />
+    <string name="address">Address</string>
+    <string name="Address1" translatable="false" />
+    <string name="NetAddress">Net Address</string>
+    <string name="NetAddress1" translatable="false">192.168.1.2</string>
+    <string name="BroadcastAddress">Broadcast Address</string>
+    <string name="BroadcastAddress1" translatable="false">TextView</string>
+    <string name="FirstAdddress">First Host Address</string>
+    <string name="FirstAddress" translatable="false">192.168.2.2</string>
+    <string name="LastAddress">Last Host Address</string>
+    <string name="LastAddress1" translatable="false">192.168.2.245</string>
+    <string name="subnet_mask">Subnet Mask</string>
+    <string name="ButtonSubnet">Subnet</string>
+    <string name="TurnBackButton">Back</string>
+    <string name="ip_address">Ip Address</string>
+
+</resources>
