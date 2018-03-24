@@ -97,13 +97,19 @@ public class Subnetting_main extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
                 TextView text = (TextView)getCurrentFocus();
+                if(text!=null && text.length() > 1) {
+                    if (Integer.parseInt(text.getText().toString()) > 255) {
+                        text.setText("255");
+                    }
 
-                if (text != null && text.length() > 2)
-                {
-                    View next = text.focusSearch(View.FOCUS_RIGHT); // or FOCUS_FORWARD
-                    if (next != null)
-                        next.requestFocus();
+                    if (text.length() > 2) {
+                        View next = text.focusSearch(View.FOCUS_RIGHT); // or FOCUS_FORWARD
+                        if (next != null)
+                            next.requestFocus();
+                    }
                 }
+
+
             }
 
             // afterTextChanged
@@ -140,15 +146,20 @@ public class Subnetting_main extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
                 TextView text = (TextView)getCurrentFocus();
+                if(ip!=null && ip.length() > 1) {
 
-                if (text != null && text.length() > 2)
-                {
-                    View next = text.focusSearch(View.FOCUS_RIGHT); // or FOCUS_FORWARD
-                    if (next != null)
-                        next.requestFocus();
+                    if (Integer.parseInt(ip.getText().toString()) > 223) {
+                        ip.setText("223");
+                    }
 
-                    initializeSpinner(ip.getText().toString());
+                    if (ip.length() > 2) {
+                        View next = ip.focusSearch(View.FOCUS_RIGHT); // or FOCUS_FORWARD
+                        if (ip != null)
+                            next.requestFocus();
 
+                        initializeSpinner(ip.getText().toString());
+
+                    }
                 }
             }
 
