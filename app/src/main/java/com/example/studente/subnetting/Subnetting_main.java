@@ -23,15 +23,22 @@ import java.util.Locale;
 
 public class Subnetting_main extends AppCompatActivity {
 
+    EditText ip1;
+    EditText ip2;
+    EditText ip3;
+    EditText ip4;
+    Spinner spinner;
+    Button b;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subnetting_main);
 
-        EditText ip1= findViewById( R.id.editText);
-        EditText ip2=findViewById(R.id.editText2);
-        EditText ip3=findViewById(R.id.editText3);
-        EditText ip4=findViewById(R.id.editText4);
+        ip1= findViewById( R.id.editText);
+        ip2=findViewById(R.id.editText2);
+        ip3=findViewById(R.id.editText3);
+        ip4=findViewById(R.id.editText4);
 
         System.out.println(ip1.getText().toString());
 
@@ -40,26 +47,15 @@ public class Subnetting_main extends AppCompatActivity {
         this.InitializeTextchange(ip3);
         this.InitializeTextchange(ip4);
 
-        //if (savedInstanceState != null){
-        //    this.initializeSpinner(ip1);
-        //    int x=savedInstanceState.getInt("n");
-        //    Spinner s=findViewById(R.id.spinner);
-        //    s.setSelection(x);
-        //}
 
 
-        Button b=findViewById(R.id.buttonSubnet);
+
+        b=findViewById(R.id.buttonSubnet);
 
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                EditText ip1= findViewById( R.id.editText);
-                EditText ip2=findViewById(R.id.editText2);
-                EditText ip3=findViewById(R.id.editText3);
-                EditText ip4=findViewById(R.id.editText4);
-                Spinner spinner=findViewById(R.id.spinner);
 
                 Intent i=new Intent(Subnetting_main.this, Second.class);
 
@@ -73,11 +69,21 @@ public class Subnetting_main extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        int x=savedInstanceState.getInt("n");
+        String saveip=savedInstanceState.getString("ip");
+        initializeSpinner(saveip);
+        spinner.setSelection(x);
+
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
 
-        Spinner spinner=findViewById(R.id.spinner);
-
-        outState.putInt("n", spinner.getSelectedItemPosition());
+        outState.putInt("n",spinner.getSelectedItemPosition());
+        outState.putString("ip",ip1.getText().toString());
 
         super.onSaveInstanceState(outState);
     }
@@ -111,13 +117,13 @@ public class Subnetting_main extends AppCompatActivity {
         });
     }
 
-    private void initializeSpinner(EditText ip)
+    private void initializeSpinner(String ip)
     {
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = (Spinner) findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(Subnetting_main.this, android.R.layout.simple_spinner_item);
 
-        adapter.addAll(createPossibleMask(IpAddress.getNetClass(Integer.parseInt(ip.getText().toString()))));
+        adapter.addAll(createPossibleMask(IpAddress.getNetClass(Integer.parseInt(ip))));
 
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -141,7 +147,7 @@ public class Subnetting_main extends AppCompatActivity {
                     if (next != null)
                         next.requestFocus();
 
-                    initializeSpinner(ip);
+                    initializeSpinner(ip.getText().toString());
 
                 }
             }
