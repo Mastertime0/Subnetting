@@ -86,7 +86,7 @@ public class Subnetting_main extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
 
-        if(spinner!=null) {
+        if(spinner!=null && !ip1.getText().toString().equals("")) {
             outState.putInt("n", spinner.getSelectedItemPosition());
             outState.putString("ip", ip1.getText().toString());
         }
