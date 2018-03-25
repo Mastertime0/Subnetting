@@ -23,12 +23,12 @@ import java.util.Locale;
 
 public class Subnetting_main extends AppCompatActivity {
 
-    EditText ip1;
-    EditText ip2;
-    EditText ip3;
-    EditText ip4;
-    Spinner spinner;
-    Button b;
+    EditText ip1=null;
+    EditText ip2=null;
+    EditText ip3=null;
+    EditText ip4=null;
+    Spinner spinner=null;
+    Button b=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,10 +71,14 @@ public class Subnetting_main extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
 
-        int x=savedInstanceState.getInt("n");
-        String saveip=savedInstanceState.getString("ip");
-        initializeSpinner(saveip);
-        spinner.setSelection(x);
+            int x = savedInstanceState.getInt("n");
+            String saveip = savedInstanceState.getString("ip");
+
+            if(saveip!=null) {
+                initializeSpinner(saveip);
+                spinner.setSelection(x);
+            }
+
 
         super.onRestoreInstanceState(savedInstanceState);
     }
@@ -82,8 +86,10 @@ public class Subnetting_main extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
 
-        outState.putInt("n",spinner.getSelectedItemPosition());
-        outState.putString("ip",ip1.getText().toString());
+        if(spinner!=null) {
+            outState.putInt("n", spinner.getSelectedItemPosition());
+            outState.putString("ip", ip1.getText().toString());
+        }
 
         super.onSaveInstanceState(outState);
     }
@@ -154,7 +160,7 @@ public class Subnetting_main extends AppCompatActivity {
 
                     if (ip.length() > 2) {
                         View next = ip.focusSearch(View.FOCUS_RIGHT); // or FOCUS_FORWARD
-                        if (ip != null)
+                        if (next!=null)
                             next.requestFocus();
 
                         initializeSpinner(ip.getText().toString());
