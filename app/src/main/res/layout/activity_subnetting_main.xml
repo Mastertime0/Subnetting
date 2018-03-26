@@ -12,7 +12,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497">
 
         <EditText
             android:id="@+id/editText2"
@@ -23,6 +24,8 @@
             android:inputType="number"
             android:maxLength="3"
             android:text="@string/ip2"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/editText" />
 
@@ -30,10 +33,12 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="50dp"
             android:text="@string/subnet_mask"
             android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/spinner"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -41,11 +46,14 @@
             android:id="@+id/editText4"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:ems="10"
             android:inputType="number"
             android:maxLength="3"
             android:text="@string/ip4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toTopOf="@+id/editText" />
 
@@ -53,10 +61,12 @@
             android:id="@+id/buttonSubnet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="50dp"
             android:text="Subnet"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -68,6 +78,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:text="."
+            app:layout_constraintEnd_toStartOf="@+id/editText4"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/editText3"
             app:layout_constraintTop_toTopOf="@+id/editText" />
 
@@ -78,6 +90,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:text="."
+            app:layout_constraintEnd_toStartOf="@+id/editText3"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/editText2"
             app:layout_constraintTop_toTopOf="@+id/editText" />
 
@@ -85,7 +99,10 @@
             android:id="@+id/spinner"
             android:layout_width="106dp"
             android:layout_height="53dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="@+id/textView4" />
 
@@ -95,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="8dp"
             android:text="@string/ip_address"
             android:textAlignment="center"
             android:textSize="30sp"
@@ -108,12 +125,14 @@
             android:id="@+id/editText"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:ems="10"
             android:inputType="number"
             android:maxLength="3"
             android:text="@string/ip1"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -126,6 +145,8 @@
             android:inputType="number"
             android:maxLength="3"
             android:text="@string/ip3"
+            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="@+id/editText" />
 
@@ -136,6 +157,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:text="."
+            app:layout_constraintEnd_toStartOf="@+id/editText2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/editText"
             app:layout_constraintTop_toTopOf="@+id/editText" />
     </android.support.constraint.ConstraintLayout>

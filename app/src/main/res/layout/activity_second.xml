@@ -20,11 +20,14 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:text="@string/TurnBackButton"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -34,12 +37,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:text="@string/address"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
             android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +59,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
             android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -69,7 +76,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
             android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -83,7 +92,9 @@
             android:text="@string/LastAddress1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -97,7 +108,9 @@
             android:text="@string/BroadcastAddress1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView12"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -112,7 +125,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
             android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -127,7 +142,9 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
             android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/textView13"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -141,7 +158,9 @@
             android:text="@string/NetAddress1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -155,7 +174,9 @@
             android:text="@string/FirstAddress"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView14"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -169,7 +190,9 @@
             android:text="@string/Address1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             tools:text="192.168.1.2" />
