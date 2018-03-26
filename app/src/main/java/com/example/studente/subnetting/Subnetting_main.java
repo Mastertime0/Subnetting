@@ -188,7 +188,6 @@ public class Subnetting_main extends AppCompatActivity {
         {
             case 'A':
                 vet=new String[23];
-
                 break;
             case 'B':
                 vet=new String[15];
