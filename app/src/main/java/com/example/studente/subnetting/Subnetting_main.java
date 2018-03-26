@@ -40,7 +40,7 @@ public class Subnetting_main extends AppCompatActivity {
         ip3=findViewById(R.id.editText3);
         ip4=findViewById(R.id.editText4);
 
-        System.out.println(ip1.getText().toString());
+        spinner = (Spinner) findViewById(R.id.spinner);
 
         this.InitializeTextchangeFirst(ip1);
         this.InitializeTextchange(ip2);
@@ -57,12 +57,14 @@ public class Subnetting_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i=new Intent(Subnetting_main.this, Second.class);
+            if(!ip1.getText().toString().equals("") && !ip2.getText().toString().equals("") && !ip3.getText().toString().equals("") && !ip4.getText().toString().equals("")) {
+                Intent i = new Intent(Subnetting_main.this, Second.class);
 
-                IpAddress indirizzo=new IpAddress(ip1.getText().toString(), ip2.getText().toString(), ip3.getText().toString(), ip4.getText().toString(), spinner.getSelectedItem().toString());
+                IpAddress indirizzo = new IpAddress(ip1.getText().toString(), ip2.getText().toString(), ip3.getText().toString(), ip4.getText().toString(), spinner.getSelectedItem().toString());
 
                 i.putExtra("address", indirizzo.toStringArray());
                 startActivity(i);
+            }
             }
         });
 
@@ -131,7 +133,6 @@ public class Subnetting_main extends AppCompatActivity {
 
     private void initializeSpinner(String ip)
     {
-        spinner = (Spinner) findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(Subnetting_main.this, android.R.layout.simple_spinner_item);
 
@@ -152,7 +153,7 @@ public class Subnetting_main extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
                 TextView text = (TextView)getCurrentFocus();
-                if(ip!=null && ip.length() > 1) {
+                if(ip!=null && !ip.getText().toString().equals("") && ip.length()>0) {
 
                     if (Integer.parseInt(ip.getText().toString()) > 223) {
                         ip.setText("223");
@@ -162,10 +163,9 @@ public class Subnetting_main extends AppCompatActivity {
                         View next = ip.focusSearch(View.FOCUS_RIGHT); // or FOCUS_FORWARD
                         if (next!=null)
                             next.requestFocus();
-
-                        initializeSpinner(ip.getText().toString());
-
                     }
+
+                    initializeSpinner(ip.getText().toString());
                 }
             }
 
